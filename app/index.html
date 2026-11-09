@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare | Secure Patient Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            background: #075985;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        header span {
+            font-size: 14px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 8%;
+            display: flex;
+            gap: 30px;
+            box-shadow: 0 2px 5px #ddd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0369a1;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #0369a1, #0e7490);
+            color: white;
+            padding: 55px 8%;
+        }
+
+        .hero h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .container {
+            padding: 35px 8%;
+        }
+
+        .section-title {
+            margin-bottom: 22px;
+            color: #075985;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .card h3 {
+            color: #0369a1;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .appointment {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 650px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #075985;
+        }
+
+        .security {
+            background: #e0f2fe;
+            padding: 25px;
+            border-left: 5px solid #0284c7;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #075985;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>HealthCare+</h1>
+    <span>Secure Patient Management Portal</span>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#appointment">Appointments</a>
+    <a href="#security">Security</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Your Health, Our Priority</h2>
+    <p>
+        Welcome to HealthCare+, a secure digital healthcare
+        management platform designed to improve patient care,
+        appointment management and healthcare accessibility.
+    </p>
+</section>
+
+<section class="container" id="services">
+    <h2 class="section-title">Our Healthcare Services</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Doctor Consultation</h3>
+            <p>Connect with healthcare professionals for medical consultations.</p>
+        </div>
+
+        <div class="card">
+            <h3>Patient Records</h3>
+            <p>Manage patient information and medical history securely.</p>
+        </div>
+
+        <div class="card">
+            <h3>Appointment Booking</h3>
+            <p>Schedule and manage hospital appointments conveniently.</p>
+        </div>
+
+        <div class="card">
+            <h3>Medical Reports</h3>
+            <p>Access laboratory reports and diagnostic information.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="appointment">
+    <h2 class="section-title">Book an Appointment</h2>
+
+    <div class="appointment">
+        <form>
+            <label>Patient Name</label>
+            <input type="text" placeholder="Enter patient name" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter email address" required>
+
+            <label>Department</label>
+            <select required>
+                <option value="">Select Department</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>General Medicine</option>
+            </select>
+
+            <label>Appointment Date</label>
+            <input type="date" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+</section>
+
+<section class="container" id="security">
+    <h2 class="section-title">Our Security Commitment</h2>
+
+    <div class="security">
+        <h3>Protecting Patient Information</h3>
+        <p>
+            HealthCare+ focuses on protecting sensitive healthcare
+            information through modern security practices.
+        </p>
+        <ul>
+            <li>Secure access control and user authentication.</li>
+            <li>Encryption of sensitive patient information.</li>
+            <li>Continuous security vulnerability assessment.</li>
+            <li>Secure application development and deployment.</li>
+            <li>Monitoring and protection against cyber threats.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <h3>HealthCare+ Management System</h3>
+    <p>Secure Healthcare | Better Patient Care</p>
+    <p>© 2026 HealthCare+. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
